@@ -1,8 +1,37 @@
+.marketing {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.content {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.heading {
+  color: #19191B;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.intro-section .heading {
+  letter-spacing: -2px;
+  font-size: 1.5625rem;
+}
+
+.sub-heading {
+  line-height: 39px;
+  letter-spacing: -0.66px;
+  font-size: 1.315rem;
+  color: #696871;
+}
+
 .drive-section {
   background-color: #00466D;
   color: #eee;
 }
+
 .drive-section .heading {
   color: #FFEFC0;
-
+}
+.drive-section p {
+  line-height: 39px;
+  font-size: 1rem;
 }
