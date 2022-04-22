@@ -35,3 +35,19 @@
   line-height: 39px;
   font-size: 1rem;
 }
+
+.supercharge-section {
+  background-color: #F7F7FB;
+  line-height: 39px;
+  letter-spacing: -0.66px;
+}
+
+.form-section {
+  background-color: #00466D;
+  color: #eee;
+  line-height: 39px;
+  letter-spacing: -0.66px;
+}
+.form-section .heading {
+  color: #eee;
+}
