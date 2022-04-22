@@ -1,0 +1,635 @@
+:root {
+	 --red: #ef5350;
+	 --red-light: #ff8380;
+	 --red-dark: #f13531;
+	 --gray: #555;
+	 --gray-light: #9e9e9e;
+	 --gray-dark: #333;
+}
+ html {
+	 background: #fff;
+}
+ body {
+	 color: #333;
+	 margin: 0;
+	 font-family: 'DM Sans', sans-serif;
+}
+ .pure-img-responsive {
+	 max-width: 100%;
+	 height: auto;
+}
+/* Add transition to containers so they can push in and out. */
+ #layout, #menu, .menu-link {
+	 -webkit-transition: all 0.2s ease-out;
+	 -moz-transition: all 0.2s ease-out;
+	 -ms-transition: all 0.2s ease-out;
+	 -o-transition: all 0.2s ease-out;
+	 transition: all 0.2s ease-out;
+}
+/* This is the parent `<div>` that contains the menu and the content area. */
+ #layout {
+	 position: relative;
+	 left: 0;
+	 padding-left: 0;
+}
+ #layout.active #menu {
+	 left: 150px;
+	 width: 150pxright;
+}
+ #layout.active .menu-link {
+	 left: 150px;
+}
+/* The content `<div>` is where all your content goes. */
+ .content {
+	 position: relative;
+	 margin: 0 1.5rem;
+}
+ .content h1 {
+	 font-size: 1.5rem;
+}
+ @media (min-width: 640px) {
+	 .content h1 {
+		 font-size: 2rem;
+	}
+}
+ @media (min-width: 640px) {
+	 .content {
+		 margin: 0rem;
+		 max-width: 1024px;
+		 padding: 0 4rem;
+	}
+}
+ @media (min-width: 1440px) {
+	 .content {
+		 margin: 0 auto;
+	}
+}
+ .header-wrapper {
+	 margin: 0;
+	 color: #333;
+	 margin-bottom: 1rem;
+	 border-bottom: 1px solid #ccc;
+	 background-color: #fff;
+	 position: relative;
+	 z-index: 10;
+}
+ .header {
+	 padding: 0;
+	 display: flex;
+	 max-width: 1024px;
+}
+ @media (min-width: 640px) {
+	 .header {
+		 padding: 0 2.5rem;
+	}
+}
+ @media (min-width: 1440px) {
+	 .header {
+		 margin: 0 auto;
+	}
+	 .header .pure-menu-heading, .header .pure-menu-link {
+		 padding-left: 0rem;
+	}
+}
+ .header h1 {
+	 margin: 0.2em 0;
+	 font-size: 3em;
+	 font-weight: 300;
+}
+ .header h2 {
+	 font-weight: 300;
+	 color: #ccc;
+	 padding: 0;
+	 margin-top: 0;
+}
+ .content-subhead {
+	 margin: 50px 0 20px 0;
+	 font-weight: 300;
+	 color: #888;
+}
+/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that appears on the left side of the page. */
+ #menu {
+	 margin-left: -150px;
+	/* "#menu" width */
+	 width: 150px;
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 bottom: 0;
+	 z-index: 1000;
+	/* so the menu or its navicon stays above all content */
+	 background: #191818;
+	 overflow-y: auto;
+}
+/* All anchors inside the menu should be styled like this. */
+ #menu a {
+	 color: var(--red);
+	 border: none;
+	 padding: 0.6em 0 0.6em 0.6em;
+	 font-size: 1.5rem;
+}
+/* Remove all background/borders, since we are applying them to #menu. */
+ #menu .pure-menu, #menu .pure-menu ul {
+	 border: none;
+	 background: transparent;
+}
+/* Add that light border to separate items into groups. */
+ #menu .pure-menu ul, #menu .pure-menu .menu-item-divided {
+	 border-top: 1px solid #333;
+}
+ .pure-menu-link:hover, .pure-menu-link:focus {
+	 color: var(--gray);
+	 background: transparent;
+}
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+/* The button to open/close the Menu is custom-made and not part of Pure. Here's how it works: */
+/* `.menu-link` represents the responsive menu toggle that shows/hides on small screens. */
+ .menu-link {
+	 position: fixed;
+	 display: block;
+	/* show this only on small screens */
+	 top: 0;
+	 left: 0;
+	/* "#menu width" */
+	 z-index: 10;
+	 width: 2em;
+	 height: auto;
+	 padding: 2.1em 1.6em;
+}
+ .menu-link:hover, .menu-link:focus {
+	 background: #000;
+}
+ .menu-link span {
+	 position: relative;
+	 display: block;
+}
+ .menu-link span, .menu-link span:before, .menu-link span:after {
+	 background-color: #fff;
+	 pointer-events: none;
+	 width: 100%;
+	 height: 0.2em;
+}
+ .menu-link span:before, .menu-link span:after {
+	 position: absolute;
+	 margin-top: -0.6em;
+	 content: ' ';
+}
+ .menu-link span:after {
+	 margin-top: 0.6em;
+}
+ .main {
+	 margin: 1rem;
+	 font-family: Arial, Helvetica, sans-serif;
+}
+ ul {
+	 list-style: none;
+	 padding: 0;
+	 margin: 0;
+}
+ .titleize {
+	 text-transform: capitalize;
+}
+ .redi-logo, .logo {
+	 max-width: 8rem;
+}
+ @media (min-width: 480px) {
+	 .redi-logo, .logo {
+		 max-width: 10rem;
+	}
+}
+ .box {
+	 margin: 1rem 0;
+}
+ .list-box {
+	 list-style: initial;
+	 margin: initial;
+	 padding: 0 0 0 40px;
+}
+ .list-box li {
+	 display: list-item;
+}
+ .loading {
+	 text-align: center;
+	 border-radius: 10em;
+	 background-color: #fff;
+	 border: 1px solid #e2bbbb;
+	 max-width: 20em;
+	 margin: 0 auto;
+	 position: relative;
+}
+ .loading img {
+	 margin: 5rem 0;
+	 max-width: 10rem;
+}
+ .loading span {
+	 position: absolute;
+	 bottom: 3em;
+	 left: 7em;
+	 letter-spacing: 4px;
+	 color: #e27875;
+	 text-shadow: 1px 0px #eee;
+}
+ .pagination li {
+	 list-style: none;
+	 display: inline-block;
+	 text-align: center;
+	 padding: 0.25rem 0.5rem;
+	 cursor: pointer;
+}
+ .pagination li.active {
+	 font-weight: bold;
+}
+ .profile-image {
+	 border-radius: 50%;
+	 max-width: 120px;
+}
+ .clear-button {
+	 position: absolute;
+	 top: 0;
+	 left: 25.5rem;
+	 color: white;
+	 background-color: #452d60;
+}
+ .reminder {
+	 margin: 0.5rem 0;
+	 padding: 1rem;
+	 background-color: #eee;
+}
+ .reminder .label-left {
+	 margin: 0 1em 0 0;
+}
+ .reminder .input-right {
+	 margin-right: 1em;
+}
+ .reminder .pure-control-group {
+	 display: inline-block;
+	 margin-right: 1em;
+}
+ .reminder .pure-control-group .label {
+	 display: inline;
+	 margin: 0 1em 0 0;
+}
+ .symptom {
+	 margin-bottom: 1rem;
+	 border-bottom: 1px solid #ccc;
+}
+ .small {
+	 color: #444;
+	 font-size: 0.8rem;
+}
+ .hover {
+	 cursor: pointer;
+}
+ .pure-menu-list {
+	 display: flex;
+}
+ .pure-menu-item {
+	 justify-content: center;
+	 align-self: center;
+	 height: auto;
+}
+ .layout {
+	 margin: 0;
+}
+ .nav-wrapper {
+	 text-align: center;
+	 justify-content: center;
+	 display: flex;
+	 margin: 1rem;
+}
+ .pure-menu-link {
+	 color: var(--red);
+	 font-size: 0.9rem;
+	 padding: 0.25rem;
+}
+ @media (min-width: 440px) {
+	 .pure-menu-link {
+		 font-size: 1rem;
+		 padding: 0.5em 1em;
+	}
+}
+ @media (min-width: 640px) {
+	 .pure-menu-link {
+		 font-size: 1.25rem;
+	}
+}
+ .pure-button {
+	 width: 100%;
+	 border-radius: 10px;
+	 padding: 0.75rem;
+	 margin: 1rem 0;
+	 font-weight: normal;
+	 font-size: 1.2rem;
+}
+ .pure-button-primary {
+	 background-color: #ef5350;
+}
+ .pure-button-secondary {
+	 background-color: #fff;
+	 color: #ef5350;
+	 border: 1px solid #ef5350;
+}
+ .splash-wrap {
+	 text-align: center;
+}
+ .splash {
+	 max-width: 100%;
+	 display: none;
+	 background-repeat: no-repeat;
+	 background-position: right;
+	 position: absolute;
+	 z-index: 0;
+	 background-size: contain;
+}
+ .wrapper {
+	 max-width: 30rem;
+	 position: relative;
+}
+ .center {
+	 text-align: center;
+}
+ .label {
+	 display: block;
+}
+ select {
+	 width: 100%;
+}
+ .splash-float {
+	 position: absolute;
+	 right: -1rem;
+	 top: -2rem;
+	 max-width: 240px;
+}
+ .input-inline input {
+	 display: inline;
+}
+ .input-inline .inline-small {
+	 display: inline;
+	 width: 5rem;
+}
+ .error-message {
+	 text-align: right;
+}
+ .pure-form .pure-control-group {
+	 position: relative;
+}
+ .pure-form .pure-control-group.error .error-message {
+	 position: absolute;
+	 right: 1rem;
+	 top: 0;
+}
+ .pure-form .pure-control-group.error input {
+	 border-color: darkred;
+}
+ .logo-image {
+	 height: 100px;
+	 border-radius: 25%;
+}
+ .image {
+	 height: 200px;
+}
+ .onboarding {
+	 margin: 1rem;
+	 max-width: 25em;
+}
+ .onboarding .error-inline {
+	 text-align: left;
+	 color: var(--red);
+	 margin: 0;
+}
+ .personal-info {
+	 text-align: left;
+}
+ .onboarding-content {
+	 margin-top: 1rem;
+	 position: relative;
+}
+ @media (min-width: 640px) {
+	 .onboarding-content {
+		 margin-top: 3rem;
+	}
+}
+ a {
+	 transition: color 0.5s ease;
+	 background-color: transparent;
+	 cursor: pointer;
+	 color: var(--red);
+}
+ a:hover, .active a {
+	 color: var(--gray);
+}
+ .bg-splash {
+	 max-height: 690px;
+	 max-width: 968px;
+	 background-repeat: repeat;
+	 background-position: center;
+	 position: absolute;
+	 z-index: 0;
+	 background-size: contain;
+	 opacity: 0.5;
+}
+ @media (min-width: 690px) {
+	 .bg-splash {
+		 display: block;
+		 height: 440px;
+		 width: 694px;
+	}
+}
+ @media (min-width: 1024px) {
+	 .bg-splash {
+		 display: block;
+		 height: 690px;
+		 width: 968px;
+	}
+}
+ .small {
+	 max-height: 50px;
+	 width: 180px;
+}
+ .splash {
+	 display: none;
+	 background-repeat: no-repeat;
+	 background-position: right;
+	 position: absolute;
+	 z-index: 0;
+	 background-size: contain;
+	 right: 0rem;
+	 opacity: 1;
+}
+ @media (min-width: 690px) {
+	 .splash {
+		 display: block;
+		 width: 180px;
+		 top: 1rem;
+		 right: 0rem;
+		 padding: 1rem;
+	}
+}
+ @media (min-width: 850px) {
+	 .splash {
+		 width: 294px;
+		 left: 28rem;
+	}
+}
+ @media (min-width: 1024px) {
+	 .splash {
+		 display: block;
+		 width: 368px;
+		 top: 4rem;
+		 left: 28em;
+		 opacity: 1;
+	}
+}
+ .splash.small {
+	 max-width: 100px;
+	 top: 0rem;
+	 left: 23rem;
+}
+ .splash-app {
+	 width: auto;
+	 max-width: 333px;
+}
+ @media (min-width: 980px) {
+	 .splash-app {
+		 max-width: 433px;
+	}
+}
+ .splash.splash-meds {
+	 right: 1em;
+	 left: auto;
+}
+ @media (min-width: 1024px) {
+	 .splash.splash-meds {
+		 left: 32em;
+	}
+}
+ .info-icon {
+	 max-width: 1.5rem;
+	 margin-left: 0.25rem;
+	 display: inline-block;
+	 vertical-align: top;
+	 margin-bottom: 2px;
+}
+ .float-right {
+	 float: right;
+}
+ .float-left {
+	 float: left;
+}
+ .cancel {
+	 margin: 0.5rem 0;
+	 display: block;
+}
+ .pure-form-inline {
+	 display: inline-block;
+}
+ .zip {
+	 margin-left: 0.5rem;
+}
+ a.button-link {
+	 background-color: var(--red);
+	 color: #fff;
+}
+ .exit {
+	 margin: 2rem auto;
+	 max-width: 50rem;
+}
+ .exit h1 {
+	 font-size: 3rem;
+	 font-weight: 500;
+}
+ .exit p {
+	 font-size: 1.25rem;
+	 max-width: 35rem;
+	 margin: 2rem 0;
+}
+ .exit .pure-form {
+	 width: 22rem;
+}
+ .exit .pure-input {
+	 text-align: center;
+	 font-size: 1.25rem;
+}
+ .exit .input-wrap {
+	 margin-bottom: 0.5rem;
+}
+ .exit .pure-button {
+	 margin-top: 0;
+	 clear: float;
+}
+ .exit .pure-button-secondary {
+	 background-color: #ffefc0;
+	 color: #000;
+	 border-color: #ffefc0;
+	 font-size: 1rem;
+	 max-width: 25rem;
+}
+ .exit .magic-text, .exit .scan-text {
+	 position: relative;
+}
+ .exit .magic-text .icon, .exit .scan-text .icon {
+	 position: relative;
+	 left: auto;
+	 top: auto;
+	 float: left;
+	 margin: 0rem;
+	 margin-right: 1rem;
+	 max-width: 3rem;
+}
+ @media (min-width: 880px) {
+	 .exit .magic-text .icon, .exit .scan-text .icon {
+		 float: none;
+		 position: absolute;
+		 left: -5rem;
+		 top: 0;
+		 max-width: 4rem;
+	}
+}
+ .exit .small-icon {
+	 width: 2rem;
+	 margin: 0 auto;
+	 padding: 0 1rem;
+	 vertical-align: middle;
+}
+ .middle-wrap {
+	 display: flex;
+	 max-width: 45rem;
+	 margin: 0 auto;
+}
+ .middle-wrap .or {
+	 font-size: 3rem;
+	 vertical-align: middle;
+	 text-align: center;
+	 margin: auto 4rem;
+	 max-width: 5rem;
+}
+ .filler {
+	 max-width: 100%;
+	 margin-top: 1rem;
+}
+ .exit-logo {
+	 text-align: right;
+}
+ .exit-logo .logo {
+	 max-width: 20rem;
+}
+ .exit-logo .logo.retro {
+	 max-width: 8rem;
+}
+ .pill-fill {
+	 text-align: center;
+	 margin: 1rem 0;
+}
+ .pill-fill .filler {
+	 width: 80%;
+	 max-width: 15rem;
+}
+ .goodrx-logo {
+	 margin-top: 1rem;
+	 margin-bottom: 1rem;
+}
+ @media (min-width: 480px) {
+	 .goodrx-logo {
+		 margin-top: 0;
+	}
+} 
