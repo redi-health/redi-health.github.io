@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+    {
+      "appID": "NWFB3X8J86.health.redi.app”,
+      "paths": ["*"]
+    }
+    ]
+  }
+}
