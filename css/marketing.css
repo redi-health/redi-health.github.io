@@ -84,6 +84,10 @@
   margin-bottom: 1rem;
 }
 
+.info .icon {
+  margin: 1rem auto;
+}
+
 .supercharge-section {
   background-color: #F7F7FB;
   line-height: 39px;
