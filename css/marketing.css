@@ -1,15 +1,19 @@
 .marketing {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .content {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   margin: 0.5rem 2rem;
 }
 
+.header-wrapper {
+  border-bottom: 0 none;
+}
+
 .heading {
-  color: #19191B;
-  font-family: 'DM Sans', sans-serif;
+  color: #19191b;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.5625rem;
   font-weight: 400;
   text-shadow: 1px 0px 1px #333;
@@ -29,44 +33,83 @@
 }
 
 .about {
-  max-width: 60em;
+  max-width: 64em;
   margin: 0 auto;
+  display: flex;
 }
 .about .pure-button {
   max-width: 10em;
   margin: 0 auto;
   display: inline-block;
 }
-@media(min-width: 64em) {
-.about-left {
-  width: 50%;
+.signup-content {
+  text-align: center;
 }
-.about-right {
-  width: 50%;
+@media (min-width: 64em) {
+  .signup-content {
+    text-align: left;
+  }
+  .about-left {
+    width: 50%;
+  }
+  .about-right {
+    width: 50%;
+  }
 }
-}
-@media(min-width: 90em) {
-    .intro-section {
-        margin: 0 auto;
-        max-width: 76em;
-    }
-    .about-splash {
-      display: none;
-    }
+@media (min-width: 90em) {
+  .intro-section {
+    margin: 0 auto;
+    max-width: 76em;
+  }
+  .about-splash {
+    display: block;
+    max-width: 45em;
+    overflow: hidden;
+    position: relative;
+  }
+  .bubble-container {
+    position: absolute;
+    height: 33em;
+  }
+  .phone-container {
+    position: absolute;
+    height: 33em;
+  }
+  .about .bubble {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    z-index: 10;
+    margin-bottom: 1rem;
+    max-width: 280px;
+    transition: all ease-in-out 1s;
+    opacity: 0.9;
+  }
+  .about-splash .main {
+    max-width: 16rem;
+    margin: 0 auto;
+    display: block;
+    transition: 3s opacity ease-in-out;
+    z-index: 1;
+    position: absolute;
+  }
+  .phone-container .main {
+    position: absolute;
+  }
 }
 
 .drive-section {
-  background-color: #00466D;
+  background-color: #00466d;
   color: #eee;
   padding-bottom: 2rem;
 }
 
 .drive-section .heading {
-  color: #FFEFC0;
+  color: #ffefc0;
   text-shadow: 1px 0px 1px #1e1e1e;
   font-weight: 400;
 }
-@media(min-width: 64em) {
+@media (min-width: 64em) {
   .drive-section .heading {
     font-size: 2.5rem;
   }
@@ -74,13 +117,13 @@
 .drive-content {
   margin: 0;
 }
-@media(min-width: 74em) {
+@media (min-width: 74em) {
   .drive-section .content {
     padding: 0;
   }
   .drive-content {
     margin: 0 auto;
-    max-width: 60em;
+    max-width: 64em;
   }
   .drive-right {
     width: 44%;
@@ -94,7 +137,7 @@
   }
 }
 .content {
-  max-width: 60rem;
+  max-width: 64rem;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -111,7 +154,7 @@
   display: block;
   flex: none;
 }
-@media(min-width: 40em) {
+@media (min-width: 40em) {
   .info-container {
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +168,7 @@
   padding: 1rem;
   margin: 1rem;
   min-height: 7rem;
-  flex-basis: calc(50% - 4rem);  
+  flex-basis: calc(50% - 4rem);
   justify-content: center;
   flex-direction: column;
   box-shadow: 1px 1px 1px #1e1e1e;
@@ -160,12 +203,12 @@
   margin: 2rem auto;
   overflow: hidden;
 }
-@media(min-width: 64em) {
+@media (min-width: 64em) {
   .supercharge-section .heading {
     max-width: 25em;
     margin: 0 auto;
     font-size: 2.5rem;
-    }
+  }
 }
 
 .form {
@@ -177,7 +220,7 @@
   display: block;
 }
 .info-bubble {
-  background-color: #00466D;
+  background-color: #00466d;
   padding: 1rem 2rem;
   border-radius: 8px;
   margin: 0.5rem;
@@ -197,7 +240,7 @@
 .desktop-image-container {
   position: relative;
 }
-@media(min-width: 64em) {
+@media (min-width: 64em) {
   .info-bubble {
     width: 12em;
     position: absolute;
@@ -241,7 +284,7 @@
 }
 
 .form-section {
-  background-color: #00466D;
+  background-color: #00466d;
   color: #eee;
   line-height: 39px;
 }
@@ -251,17 +294,19 @@
   font-weight: 400;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   width: 100%;
 }
 
-.content .pure-button-primary, .content a.pure-button-primary {
-	 background-color: #ef5350;
+.content .pure-button-primary,
+.content a.pure-button-primary {
+  background-color: #ef5350;
 }
 .content .pure-button-secondary {
-	 background-color: #fff;
-	 color: #ef5350;
-	 border: 1px solid #ef5350;
+  background-color: #fff;
+  color: #ef5350;
+  border: 1px solid #ef5350;
 }
 .logo-foot {
   text-align: center;
@@ -273,15 +318,15 @@
 }
 .footer {
   margin: 0;
-  background-color: #00466D;
+  background-color: #00466d;
   color: #eee;
   padding: 1rem;
 }
-    .footer ul {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-    }
-@media(min-width: 30em) {
+.footer ul {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+@media (min-width: 30em) {
   .footer ul {
     display: flex;
     text-align: center;
@@ -296,12 +341,12 @@
   text-decoration: none;
 }
 .footer a:hover {
-	color: #ef5350;
+  color: #ef5350;
 }
 
 .footer-meta {
   text-align: center;
-    font-size: 0.75rem;
-    font-weight: 400;
-    margin: 1rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 1rem;
 }
