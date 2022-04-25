@@ -85,7 +85,21 @@
   border-radius: 8px;
   margin: 0.5rem;
   color: white;
-  line-height: 21px
+  line-height: 21px;
+  font-size: 1.15rem;
+  padding-left: 4rem;
+  min-height: 4rem;
+}
+.inline-icon {
+  width: 31px;
+  height: 31px;
+  float: left;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.info-bubble .inline-icon {
+  margin-left: -3rem;
 }
 
 .form-section {
