@@ -118,6 +118,41 @@
 	 color: #ef5350;
 	 border: 1px solid #ef5350;
 }
+.logo-foot {
+  text-align: center;
+  margin: 0 auto;
+}
+.logo-icon {
+  border-radius: 45%;
+  padding: 1rem;
+}
 .footer {
+  margin: 0;
+  background-color: #00466D;
+  color: #eee;
+  padding: 1rem;
+}
+.footer ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.footer li {
+  margin-right: 1rem;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover {
+	color: #ef5350;
+}
 
+.footer-meta {
+  text-align: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 1rem;
 }
