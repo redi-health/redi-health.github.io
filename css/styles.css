@@ -317,7 +317,7 @@
 	 font-weight: normal;
 	 font-size: 1.2rem;
 }
- .pure-button-primary {
+ .pure-button-primary, a.pure-button-primary {
 	 background-color: #ef5350;
 }
  .pure-button-secondary {

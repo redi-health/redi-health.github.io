@@ -4,15 +4,12 @@
 
 .content {
   font-family: 'DM Sans', sans-serif;
+  margin: 0.5rem 2rem;
 }
 
 .heading {
   color: #19191B;
   font-family: 'DM Sans', sans-serif;
-}
-
-.intro-section .heading {
-  letter-spacing: -2px;
   font-size: 1.5625rem;
 }
 
@@ -21,11 +18,15 @@
   letter-spacing: -0.66px;
   font-size: 1.315rem;
   color: #696871;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .drive-section {
   background-color: #00466D;
   color: #eee;
+  padding-bottom: 2rem;
 }
 
 .drive-section .heading {
@@ -36,18 +37,42 @@
   font-size: 1rem;
 }
 
+.info-container {
+}
+.info .sub-heading {
+  line-height: 26px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.info {
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.info .body {
+  color: #696871;
+}
+
 .supercharge-section {
   background-color: #F7F7FB;
   line-height: 39px;
-  letter-spacing: -0.66px;
 }
 
 .form-section {
   background-color: #00466D;
   color: #eee;
   line-height: 39px;
-  letter-spacing: -0.66px;
 }
 .form-section .heading {
   color: #eee;
+}
+.content .pure-button-primary, .content a.pure-button-primary {
+	 background-color: #ef5350;
+}
+.content .pure-button-secondary {
+	 background-color: #fff;
+	 color: #ef5350;
+	 border: 1px solid #ef5350;
 }
