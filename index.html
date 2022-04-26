@@ -15,7 +15,6 @@
     <div class="header-wrapper">
       <div class="header">
         <a class="pure-menu-heading" href="/"> <img src="/img/redi-logo.svg" class="redi-logo" alt="Redi Health" title="Redi Health" /></a>
-
         <ul class="nav pure-menu-list">
           <li class="pure-menu-item active"><a class="pure-menu-link" href="/">Home</a></li>
           <li class="pure-menu-item"><a class="pure-menu-link" href="https://app.redi.health/signup">Sign Up</a></li>
@@ -43,8 +42,23 @@
         </div>
         <div class="about-right">
           <div class="about-splash">
+            <ul class="phone-bubble-container">
+                <li class="phone-bubble " data-id="med" id="bubble-med">Set reminders for your meds and supplements</li>
+                <li class="phone-bubble " data-id="diet" id="bubble-diet">Track every meal and set macro nutrient goals</li>
+                <li class="phone-bubble " data-id="symptom" id="bubble-symptom">See how your symptoms are trending and create reports to share with your doctor</li>
+                <li class="phone-bubble " data-id="exercise" id="bubble-exercise">Connect your wearable to track activity and more</li>
+                <li class="phone-bubble " data-id="rediconnect" id="bubble-rediconnect">Obtain free support to manage your conditions</li>
+                <li class="phone-bubble " data-id="saving" id="bubble-saving">Unlock discounts on your medications</li>
+             </ul>
             <div class="phone-container" id="phone-container">
-              <img src="/img/phone/phone-welcome.png" class="main" id="welcome" />
+              <img src="/img/phone/phone-welcome.png" class="main show" id="welcome" />
+                <img src="/img/phone/phone-med.png" class="main hide" id="med" />
+                <img src="/img/phone/phone-diet.png" class="main hide" id="diet" />
+                <img src="/img/phone/phone-symptom.png" class="main hide" id="symptom" />
+                <img src="/img/phone/phone-exercise.png" class="main hide" id="exercise" />
+                <img src="/img/phone/phone-rediconnect.png" class="main hide" id="rediconnect" />
+                <img src="/img/phone/phone-saving.png" class="main hide" id="saving" />
+            </div>
             </div>
           </div>
         </div>
@@ -197,6 +211,86 @@
       gtag("js", new Date());
 
       gtag("config", "G-5CZVNEYJFY");
+    </script>
+    <script>
+
+const SLIDE_TIMEOUT_SECONDS = 7 * 1000;
+  const rotateImage = (current) => {
+    let imgs = document.querySelectorAll('.about-splash .main');
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((e) => {
+      if (current == imgs.length - 1) {
+        e.classList.remove('dim');
+      } else {
+        e.classList.add('dim');
+        e.classList.remove('highlight');
+      }
+    });
+    if(imgs[current] && bubbles[current]) {
+       imgs[current].classList.add('hide');
+       imgs[current].classList.remove('show');
+       bubbles[current].classList.remove('dim');
+       bubbles[current].classList.add('highlight');
+    }
+    let next = current + 1;
+    if (next >= imgs.length - 1) {
+      next = 0;
+    }
+    imgs[next].classList.add('show');
+    imgs[next].classList.remove('hide');
+    nextImg = next;
+    waiter = setTimeout(() => rotateImage(next), SLIDE_TIMEOUT_SECONDS);
+     };
+
+
+  const show = (e) => {
+    let id = e.target.dataset.id;
+    if (id === 'goodrx') return;
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((b) => {
+      b.classList.add('dim');
+    });
+
+    e.target.classList.add('highlight');
+    e.target.classList.remove('dim');
+    clearTimeout(waiter);
+    let img = document.getElementById(id);
+    img.classList.remove('hide');
+    img.classList.add('highlight');
+  };
+
+  const resume = (e) => {
+    let id = e.target.dataset.id;
+    if (id === 'goodrx') return;
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((b) => {
+      b.classList.remove('dim');
+      b.classList.remove('highlight');
+    });
+
+    let img = document.getElementById(id);
+    img.classList.remove('highlight');
+    img.classList.add('hide');
+
+    let imgs = document.querySelectorAll('.about-splash .main');
+
+    imgs[0].classList.add('show');
+    imgs[0].classList.remove('hide');
+
+    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
+  };
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((e) => {
+       e.addEventListener('mouseout', resume);
+       e.addEventListener('mouseover', show);
+       e.addEventListener('click', show);
+     });
+
+
+    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
     </script>
   </body>
 </html>

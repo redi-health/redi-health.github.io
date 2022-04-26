@@ -67,15 +67,15 @@
     overflow: hidden;
     position: relative;
     height: 33em;
-    left: 18%;
   }
-  .bubble-container {
+  .phone-bubble-container {
     position: absolute;
     height: 33em;
   }
   .phone-container {
-    position: absolute;
+    position: relative;
     height: 33em;
+    left: 15rem;
   }
   .about .bubble {
     display: block;
@@ -95,9 +95,44 @@
     z-index: 1;
     position: absolute;
   }
-  .phone-container .main {
-    position: absolute;
+  .main.highlight {
+    transition: 0.5s opacity ease-in-out;
   }
+  .phone-bubble.highlight {
+    transition: 0.5s opacity ease-in-out;
+  }
+}
+.phone-bubble-container {
+  width: 14.5rem;
+}
+.phone-bubble {
+  background-color: #00466d;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  color: white;
+  line-height: 16px;
+  font-size: 0.85rem;
+  min-height: 2rem;
+  text-shadow: 1px 0px 1px #333;
+  font-weight: 400;
+  box-shadow: 1px 1px 1px #ccc;
+  letter-spacing: normal;
+  font-family: "DM Sans", sans-serif;
+  transition: 1.5s opacity ease-in-out;
+}
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+
+.dim {
+  opacity: 0.65;
+}
+.highlight {
+  opacity: 0.95;
 }
 
 .drive-section {
