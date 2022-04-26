@@ -167,6 +167,12 @@
 .drive-content {
   margin: 0;
 }
+  .mobile {
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
 @media (min-width: 74em) {
   .drive-section .content {
     padding: 0;
@@ -174,16 +180,23 @@
   .drive-content {
     margin: 0 auto;
     max-width: 64em;
+    display: flex;
   }
   .drive-right {
-    width: 44%;
+    width: 54%;
     margin-right: 1%;
   }
   .drive-left {
-    width: 55%;
+    width: 45%;
   }
   .content {
     margin: 1rem 0;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop{
+    display: block;
   }
 }
 .content {
@@ -480,4 +493,8 @@
  font-weight: 700;
  color: #EF5350;
  text-decoration: none;
+}
+.small-bubble {
+ width: 35%;
+    margin-left: 65%; 
 }
