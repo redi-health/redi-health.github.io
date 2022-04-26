@@ -153,7 +153,7 @@
         <div class="content">
           <h2 class="heading">Get In Touch</h2>
           <p>Contact us today to see how Redi Health can increase engagement and adherance by providing your patients a seamless way to manage their health.</p>
-          <form class="pure-form form">
+          <form action="https://formcarry.com/s/4nAXyPvg-N" method="POST" accept-charset="UTF-8" class="pure-form form" id="contact">
             <div>
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" placeholder="Your name" />
@@ -165,7 +165,9 @@
             <div>
               <label for="message">Message:</label>
               <textarea id="message" name="message" placeholder="Your message..."></textarea>
+              <input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
             </div>
+            <button class="pure-button pure-button-primary">Submit</button>
           </form>
           <div class="logo-foot">
             <img src="/img/logo.png" width="110" class="logo-icon" />

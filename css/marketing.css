@@ -262,13 +262,13 @@
 }
 
 .form {
-  margin: 0 10%;
+  margin: 0;
   max-width: 40em;
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 1px 1px 3px #28292a;
-
+  border: 1px solid #2c576f;
+  background-color: #024b73;
 }
 @media(min-width: 64em) {
   .form {
@@ -419,13 +419,17 @@
   text-align: center;
 }
 .downloads {
-  display: flex;
-  justify-content: space-evenly;
+  display: block;
+}
+@media(min-width: 64em) {
+  .downloads {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .downloads .pure-button {
   margin-right: 0.5rem;
   max-width: 25rem;
-
 }
 .article-list {
   display: block;
