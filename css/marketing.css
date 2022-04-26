@@ -399,3 +399,71 @@
   font-weight: 400;
   margin: 1rem;
 }
+.center-splash {
+  display: block;
+  margin: 0 auto;
+  width: 15rem;
+}
+.press .heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.downloads {
+  display: flex;
+  justify-content: space-evenly;
+}
+.downloads .pure-button {
+  margin-right: 0.5rem;
+  max-width: 25rem;
+
+}
+.article-list {
+  display: block;
+}
+
+@media(min-width: 60em) {
+.article-list {
+  display: flex;
+}
+
+}
+
+.article {
+  height: 18rem;
+  width: 18em;
+  background-color: white;
+  box-shadow: 2px 1px 7px #bbb;
+  margin: 1rem;
+  display: block;
+}
+.article-image {
+  height: 8rem;
+  overflow: hidden;
+  position: relative;
+}
+.article-image img {
+  position: absolute;
+  width: 18em;
+  left: 0;
+  top: -25%;
+  max-height: 16rem;
+}
+.article-list .title {
+  font-weight: bold;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+.article-list p {
+  padding: 0.5rem;
+}
+.article-list .link {
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.article-list .link a {
+ font-family: DM Sans;
+ font-size: 1.1em;
+ font-weight: 700;
+ color: #EF5350;
+ text-decoration: none;
+}

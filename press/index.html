@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Redi.Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link href="/css/pure-min.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/marketing.css" rel="stylesheet" />
+  </head>
+  <body class="marketing press">
+    <div class="header-wrapper">
+      <div class="header">
+        <a class="pure-menu-heading" href="/"> <img src="/img/redi-logo.svg" class="redi-logo" alt="Redi Health" title="Redi Health" /></a>
+        <ul class="nav pure-menu-list">
+          <li class="pure-menu-item active"><a class="pure-menu-link" href="/">Home</a></li>
+          <li class="pure-menu-item"><a class="pure-menu-link" href="https://app.redi.health/signup">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <img src="/img/megaphone-press-page.png" class="center-splash" />
+      <h1 class="heading">Press & Media</h1>
+      <p class="sub-heading">Find the latest Redi.Health news and announcements, company information and media resources here. You can also send us your media inquiries.</p>
+      <div class="downloads">
+        <a href="https://redi-health-public.s3.us-east-2.amazonaws.com/redi-logos/redilogos.zip" class="pure-button pure-button-primary">Download Our Press Kit</a>
+        <a href="https://redi-health-public.s3.us-east-2.amazonaws.com/redi-logos/redilogos.zip" class="pure-button pure-button-primary">Contact Us</a>
+      </div>
+      <h2 class="heading">Latest Articles</h2>
+      <ul class="article-list">
+        <li class="article">
+          <div class="article-image">
+            <img src="/img/logo.png" />
+          </div>
+          <div class="title">Redi PR</div>
+          <p>Redi.Health Secures Financing...</p>
+          <div class="link">
+            <a href="https://www.prweb.com/releases/redi_health_secures_financing_to_accelerate_availability_of_health_management_platform_for_patients_with_chronic_diseases/prweb18205017.htm">View Full Article <img src="/img/article_link_img.png"></a>
+          </div>
+        </li>
+        <li class="article">
+          <div class="article-image">
+            <img src="/img/dispatch.jpeg" />
+          </div>
+          <div class="title">Columbus Dispatch</div>
+          <p>Columbus startup looks to...</p>
+          <div class="link">
+            <a href="https://www.dispatch.com/story/business/2021/10/06/redi-health-works-help-patients-multiple-chronic-conditions/5927745001/">View Full Article <img src="/img/article_link_img.png"></a>
+          </div>
+        </li>
+        <li class="article">
+          <div class="article-image">
+            <img src="/img/rev1_circle.png" />
+          </div>
+          <div class="title">Rev1 Ventures</div>
+          <p>Rev1 Spures Startup Growth by...</p>
+          <div class="link">
+            <a href="https://www.rev1ventures.com/blog/rev1-spurs-startup-growth-by-closing-capital-gap-announces-first-investment-from-pre-seed-fund/?utm_campaign=coschedule&utm_source=linkedin_company&utm_medium=Rev1%20Ventures">View Full Article <img src="/img/article_link_img.png"></a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="footer">
+      <div class="content">
+        <ul class="">
+          <li>
+            <a href="/">Redi.Health</a>
+          </li>
+          <li>
+            <a href="https://www.careers-page.com/redihealth">Careers</a>
+          </li>
+          <li>
+            <a href="/press">Press</a>
+          </li>
+          <li>
+            <a href="https://redi-health-public.s3.us-east-2.amazonaws.com/Redi.Health+Privacy+Policy+July+2021.pdf">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="https://redi-health-public.s3.us-east-2.amazonaws.com/Terms+of+Service+July+2021.pdf">Terms of Service</a>
+          </li>
+        </ul>
+        <div class="footer-meta">© 2022 Redi.Health Inc, All Rights Reserved</div>
+      </div>
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CZVNEYJFY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5CZVNEYJFY");
+    </script>
+    <script>
+
+const SLIDE_TIMEOUT_SECONDS = 7 * 1000;
+  const rotateImage = (current) => {
+    let imgs = document.querySelectorAll('.about-splash .main');
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((e) => {
+      if (current == imgs.length - 1) {
+        e.classList.remove('dim');
+      } else {
+        e.classList.add('dim');
+        e.classList.remove('highlight');
+      }
+    });
+    if(imgs[current]) {
+        imgs[current].classList.add('hide');
+        imgs[current].classList.remove('show');
+    }
+     if(bubbles[current]) {
+       bubbles[current].classList.remove('dim');
+       bubbles[current].classList.add('highlight');
+    }
+    let next = current + 1;
+    if (next >= imgs.length) {
+      next = 0;
+    }
+    if(imgs[next]) {
+      imgs[next].classList.add('show');
+      imgs[next].classList.remove('hide');
+    }
+    nextImg = next;
+    waiter = setTimeout(() => rotateImage(next), SLIDE_TIMEOUT_SECONDS);
+     };
+
+
+  const show = (e) => {
+    let id = e.target.dataset.id;
+    if (id === 'goodrx') return;
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((b) => {
+      b.classList.add('dim');
+    });
+
+    e.target.classList.add('highlight');
+    e.target.classList.remove('dim');
+    clearTimeout(waiter);
+    let img = document.getElementById(id);
+    img.classList.remove('hide');
+    img.classList.add('highlight');
+  };
+
+  const resume = (e) => {
+    let id = e.target.dataset.id;
+    if (id === 'goodrx') return;
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((b) => {
+      b.classList.remove('dim');
+      b.classList.remove('highlight');
+    });
+
+    let img = document.getElementById(id);
+    img.classList.remove('highlight');
+    img.classList.add('hide');
+
+    let imgs = document.querySelectorAll('.about-splash .main');
+
+    imgs[0].classList.add('show');
+    imgs[0].classList.remove('hide');
+
+    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
+  };
+
+    let bubbles = document.querySelectorAll('.phone-bubble');
+    bubbles.forEach((e) => {
+       e.addEventListener('mouseout', resume);
+       e.addEventListener('mouseover', show);
+       e.addEventListener('click', show);
+     });
+
+
+    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
+    </script>
+  </body>
+</html>
