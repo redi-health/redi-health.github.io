@@ -36,6 +36,7 @@
   max-width: 64em;
   margin: 0 auto;
   display: flex;
+  margin-bottom: 1rem;
 }
 .about .pure-button {
   max-width: 10em;
@@ -264,6 +265,11 @@
   margin: 0 10%;
   max-width: 35em;
   margin-bottom: 2rem;
+}
+@media(min-width: 64em) {
+  .form {
+    margin: 0 auto;
+  }
 }
 .form label {
   display: block;
