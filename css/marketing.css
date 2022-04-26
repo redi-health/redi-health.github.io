@@ -121,6 +121,17 @@
   font-family: "DM Sans", sans-serif;
   transition: 1.5s opacity ease-in-out;
 }
+.phone-bubble.goodrx {
+  background-color: #fbda00;
+  color: #00466d;
+  text-shadow: none;
+}
+.phone-bubble.alt {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px;
+  text-shadow: none;
+}
+
 .hide {
   opacity: 0;
 }
@@ -133,6 +144,7 @@
 }
 .highlight {
   opacity: 0.95;
+  z-index:100;
 }
 
 .drive-section {

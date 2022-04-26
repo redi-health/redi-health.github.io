@@ -48,7 +48,10 @@
                 <li class="phone-bubble " data-id="symptom" id="bubble-symptom">See how your symptoms are trending and create reports to share with your doctor</li>
                 <li class="phone-bubble " data-id="exercise" id="bubble-exercise">Connect your wearable to track activity and more</li>
                 <li class="phone-bubble " data-id="rediconnect" id="bubble-rediconnect">Obtain free support to manage your conditions</li>
-                <li class="phone-bubble " data-id="saving" id="bubble-saving">Unlock discounts on your medications</li>
+                <li class="phone-bubble goodrx" data-id="saving" id="bubble-saving">Unlock discounts on your medications</li>
+                <li class="phone-bubble alt" data-id="goodrx" id="bubble-goodrx">
+                <img src="/img/PoweredByGoodRx.svg" class="goodrx bubble" />
+                </li>
              </ul>
             <div class="phone-container" id="phone-container">
               <img src="/img/phone/phone-welcome.png" class="main show" id="welcome" />
@@ -226,18 +229,22 @@ const SLIDE_TIMEOUT_SECONDS = 7 * 1000;
         e.classList.remove('highlight');
       }
     });
-    if(imgs[current] && bubbles[current]) {
-       imgs[current].classList.add('hide');
-       imgs[current].classList.remove('show');
+    if(imgs[current]) {
+        imgs[current].classList.add('hide');
+        imgs[current].classList.remove('show');
+    }
+     if(bubbles[current]) {
        bubbles[current].classList.remove('dim');
        bubbles[current].classList.add('highlight');
     }
     let next = current + 1;
-    if (next >= imgs.length - 1) {
+    if (next >= imgs.length) {
       next = 0;
     }
-    imgs[next].classList.add('show');
-    imgs[next].classList.remove('hide');
+    if(imgs[next]) {
+      imgs[next].classList.add('show');
+      imgs[next].classList.remove('hide');
+    }
     nextImg = next;
     waiter = setTimeout(() => rotateImage(next), SLIDE_TIMEOUT_SECONDS);
      };
