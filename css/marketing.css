@@ -111,10 +111,11 @@
   padding: 1rem;
   border-radius: 8px;
   margin: 0.5rem;
+  padding: auto;
   color: white;
   line-height: 16px;
   font-size: 0.85rem;
-  min-height: 2rem;
+  height: 2.8rem;
   text-shadow: 1px 0px 1px #333;
   font-weight: 400;
   box-shadow: 1px 1px 1px #ccc;
@@ -496,5 +497,6 @@
 }
 .small-bubble {
  width: 35%;
-    margin-left: 65%; 
+ margin-left: 65%;
+ margin-top: -7px;
 }
