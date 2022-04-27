@@ -162,7 +162,7 @@
 }
 @media (min-width: 64em) {
   .drive-section .heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 .drive-content {
@@ -175,6 +175,9 @@
     display: none;
   }
 @media (min-width: 74em) {
+  .drive-section .heading {
+    font-size: 4rem;
+  }
   .drive-section .content {
     padding: 0;
   }
