@@ -191,6 +191,7 @@
  @media (min-width: 480px) {
 	 .redi-logo, .logo {
 		 max-width: 10rem;
+     margin-bottom: -5px;
 	}
 }
  .box {
