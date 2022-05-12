@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Redi.Health</title>
+    <title>Redi Health - Track Meds & More</title>
+    <meta name="description" content="The first digital patient support platform with total health management. Medication, symptom, activity, & diet tracking. Affordable pricing options for medications. One interface for SMS, email, and in app patient outreach. Vendor-agnostic integrated patient support programs.">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://redi.health/press.html" />
     <link href="/css/pure-min.css" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
     <link href="/css/marketing.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   </head>
   <body class="marketing press">
     <div class="header-wrapper">
@@ -118,7 +121,7 @@
             <a href="https://www.careers-page.com/redihealth">Careers</a>
           </li>
           <li>
-            <a href="/press">Press</a>
+            <a href="/press.html">Press</a>
           </li>
           <li>
             <a href="https://redi-health-public.s3.us-east-2.amazonaws.com/Redi.Health+Privacy+Policy+July+2021.pdf">Privacy Policy</a>
@@ -139,91 +142,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-5CZVNEYJFY");
-    </script>
-    <script>
-
-const SLIDE_TIMEOUT_SECONDS = 7 * 1000;
-  const rotateImage = (current) => {
-    let imgs = document.querySelectorAll('.about-splash .main');
-    let bubbles = document.querySelectorAll('.phone-bubble');
-    bubbles.forEach((e) => {
-      if (current == imgs.length - 1) {
-        e.classList.remove('dim');
-      } else {
-        e.classList.add('dim');
-        e.classList.remove('highlight');
-      }
-    });
-    if(imgs[current]) {
-        imgs[current].classList.add('hide');
-        imgs[current].classList.remove('show');
-    }
-     if(bubbles[current]) {
-       bubbles[current].classList.remove('dim');
-       bubbles[current].classList.add('highlight');
-    }
-    let next = current + 1;
-    if (next >= imgs.length) {
-      next = 0;
-    }
-    if(imgs[next]) {
-      imgs[next].classList.add('show');
-      imgs[next].classList.remove('hide');
-    }
-    nextImg = next;
-    waiter = setTimeout(() => rotateImage(next), SLIDE_TIMEOUT_SECONDS);
-     };
-
-
-  const show = (e) => {
-    let id = e.target.dataset.id;
-    if (id === 'goodrx') return;
-
-    let bubbles = document.querySelectorAll('.phone-bubble');
-    bubbles.forEach((b) => {
-      b.classList.add('dim');
-    });
-
-    e.target.classList.add('highlight');
-    e.target.classList.remove('dim');
-    clearTimeout(waiter);
-    let img = document.getElementById(id);
-    img.classList.remove('hide');
-    img.classList.add('highlight');
-  };
-
-  const resume = (e) => {
-    let id = e.target.dataset.id;
-    if (id === 'goodrx') return;
-
-    let bubbles = document.querySelectorAll('.phone-bubble');
-    bubbles.forEach((b) => {
-      b.classList.remove('dim');
-      b.classList.remove('highlight');
-    });
-
-    let img = document.getElementById(id);
-    img.classList.remove('highlight');
-    img.classList.add('hide');
-
-    let imgs = document.querySelectorAll('.about-splash .main');
-
-    imgs[0].classList.add('show');
-    imgs[0].classList.remove('hide');
-
-    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
-  };
-
-    let bubbles = document.querySelectorAll('.phone-bubble');
-    bubbles.forEach((e) => {
-       e.addEventListener('mouseout', resume);
-       e.addEventListener('mouseover', show);
-       e.addEventListener('click', show);
-     });
-
-
-    waiter = setTimeout(() => rotateImage(0), SLIDE_TIMEOUT_SECONDS);
+      gtag("config", G-5CZVNEYJFY");
     </script>
   </body>
 </html>
