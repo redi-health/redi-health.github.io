@@ -478,6 +478,7 @@
   left: 0;
   top: -25%;
   max-height: 16rem;
+  object-fit: cover;
 }
 .article-list .title {
   font-weight: bold;
