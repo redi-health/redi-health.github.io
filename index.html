@@ -226,5 +226,19 @@
     <script>
         const SLIDE_TIMEOUT_SECONDS=7e3,rotateImage=e=>{let t=document.querySelectorAll(".about-splash .main"),s=document.querySelectorAll(".phone-bubble");s.forEach(s=>{e==t.length-1?s.classList.remove("dim"):(s.classList.add("dim"),s.classList.remove("highlight"))}),t[e]&&(t[e].classList.add("hide"),t[e].classList.remove("show")),s[e]&&(s[e].classList.remove("dim"),s[e].classList.add("highlight"));let l=e+1;l>=t.length&&(l=0),t[l]&&(t[l].classList.add("show"),t[l].classList.remove("hide")),nextImg=l,waiter=setTimeout(()=>rotateImage(l),7e3)},show=e=>{let t=e.target.dataset.id;if("goodrx"===t)return;document.querySelectorAll(".phone-bubble").forEach(e=>{e.classList.add("dim")}),e.target.classList.add("highlight"),e.target.classList.remove("dim"),clearTimeout(waiter);let s=document.getElementById(t);s.classList.remove("hide"),s.classList.add("highlight")},resume=e=>{let t=e.target.dataset.id;if("goodrx"===t)return;document.querySelectorAll(".phone-bubble").forEach(e=>{e.classList.remove("dim"),e.classList.remove("highlight")});let s=document.getElementById(t);s.classList.remove("highlight"),s.classList.add("hide");let l=document.querySelectorAll(".about-splash .main");l[0].classList.add("show"),l[0].classList.remove("hide"),waiter=setTimeout(()=>rotateImage(0),7e3)};let bubbles=document.querySelectorAll(".phone-bubble");bubbles.forEach(e=>{e.addEventListener("mouseout",resume),e.addEventListener("mouseover",show),e.addEventListener("click",show)}),waiter=setTimeout(()=>rotateImage(0),7e3);
     </script>
+    <script>
+      (function () {
+        var zi = document.createElement('script');
+        zi.type = 'text/javascript';
+        zi.async = true;
+        zi.referrerPolicy = 'unsafe-url';
+        zi.src = 'https://ws.zoominfo.com/pixel/62cdc79e54a61d00908af1ff';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(zi, s);
+      })();
+    </script>
+    <noscript>
+      <img src="https://ws.zoominfo.com/pixel/62cdc79e54a61d00908af1ff" width="1" height="1" style="display: none;" alt="websights"/>
+    </noscript>
   </body>
 </html>
