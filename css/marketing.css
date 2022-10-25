@@ -377,7 +377,11 @@
 
 .content .pure-button-primary,
 .content a.pure-button-primary {
-  background-color: #ef5350;
+  background-color: var(--blue);
+}
+.content .pure-button-primary:hover,
+.content a.pure-button-primary:hover {
+  background-color: var(--hover-blue);
 }
 .content .pure-button-secondary {
   background-color: #fff;
@@ -417,7 +421,8 @@
   text-decoration: none;
 }
 .footer a:hover {
-  color: #ef5350;
+  background-color: transparent;
+  color: var(--gray-light);
 }
 
 .footer-meta {
