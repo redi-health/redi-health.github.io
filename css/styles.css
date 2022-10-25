@@ -141,9 +141,8 @@
 	 border-top: 1px solid #333;
 }
  .pure-menu-link:hover, .pure-menu-link:focus {
-	 color: var(--white);
-	 background: var(--hover-blue);
-	 border-radius: 100px;
+	text-shadow: 0px 0px 0px #006ca8;
+	background: transparent;
 }
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 /* The button to open/close the Menu is custom-made and not part of Pure. Here's how it works: */
@@ -299,10 +298,9 @@
 	 margin: 1rem;
 }
  .pure-menu-link {
-	color: var(--white);
-	background: var(--blue);
-	border-radius: 100px;
-	font-weight: 400;
+	color: var(--blue);
+	background: transparent;
+	font-weight: 700;
 	font-size: 0.9rem;
 	padding: 0.25rem;
 }
