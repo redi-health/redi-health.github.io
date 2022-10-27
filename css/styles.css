@@ -5,6 +5,9 @@
 	 --gray: #555;
 	 --gray-light: #9e9e9e;
 	 --gray-dark: #333;
+	 --blue: #006ca8;
+	 --hover-blue: rgba(0, 108, 168, 0.72);
+	 --white: #fff
 }
  html {
 	 background: #fff;
@@ -87,7 +90,7 @@
 	 .header {
 		 margin: 0 auto;
 	}
-	 .header .pure-menu-heading, .header .pure-menu-link {
+	 .header .pure-menu-heading, .header {
 		 padding-left: 0rem;
 	}
 }
@@ -138,8 +141,8 @@
 	 border-top: 1px solid #333;
 }
  .pure-menu-link:hover, .pure-menu-link:focus {
-	 color: var(--gray);
-	 background: transparent;
+	text-shadow: 0px 0px 0px #006ca8;
+	background: transparent;
 }
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 /* The button to open/close the Menu is custom-made and not part of Pure. Here's how it works: */
@@ -295,9 +298,11 @@
 	 margin: 1rem;
 }
  .pure-menu-link {
-	 color: var(--red);
-	 font-size: 0.9rem;
-	 padding: 0.25rem;
+	color: var(--blue);
+	background: transparent;
+	font-weight: 700;
+	font-size: 0.9rem;
+	padding: 0.25rem;
 }
  @media (min-width: 440px) {
 	 .pure-menu-link {
@@ -319,7 +324,7 @@
 	 font-size: 1.2rem;
 }
  .pure-button-primary, a.pure-button-primary {
-	 background-color: #ef5350;
+	 background-color: var(--blue);
 }
  .pure-button-secondary {
 	 background-color: #fff;
@@ -413,7 +418,7 @@
 	 color: var(--red);
 }
  a:hover, .active a {
-	 color: var(--gray);
+	 background-color: var(--hover-blue);
 }
  .bg-splash {
 	 max-height: 690px;
